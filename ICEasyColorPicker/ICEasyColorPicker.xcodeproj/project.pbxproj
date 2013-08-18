@@ -1,0 +1,90 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		08A783DB17C0A60400B6F81D /* ICEasyColorPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEasyColorPicker.h; sourceTree = "<group>"; };
+		08A783DC17C0A60400B6F81D /* ICEasyColorPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEasyColorPicker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08A783A317C0A48F00B6F81D = {
+			isa = PBXGroup;
+			children = (
+				08A783AA17C0A4B100B6F81D /* Classes */,
+				08A783AB17C0A4B800B6F81D /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		08A783AA17C0A4B100B6F81D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				08A783DB17C0A60400B6F81D /* ICEasyColorPicker.h */,
+				08A783DC17C0A60400B6F81D /* ICEasyColorPicker.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		08A783AB17C0A4B800B6F81D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		08A783A417C0A48F00B6F81D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 08A783A717C0A48F00B6F81D /* Build configuration list for PBXProject "ICEasyColorPicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08A783A317C0A48F00B6F81D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		08A783A817C0A48F00B6F81D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		08A783A917C0A48F00B6F81D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		08A783A717C0A48F00B6F81D /* Build configuration list for PBXProject "ICEasyColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A783A817C0A48F00B6F81D /* Debug */,
+				08A783A917C0A48F00B6F81D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08A783A417C0A48F00B6F81D /* Project object */;
+}

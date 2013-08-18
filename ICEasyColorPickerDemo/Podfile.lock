@@ -1,0 +1,14 @@
+PODS:
+  - ICEasyColorPicker (0.0.1)
+
+DEPENDENCIES:
+  - ICEasyColorPicker (from `..`)
+
+EXTERNAL SOURCES:
+  ICEasyColorPicker:
+    :path: ..
+
+SPEC CHECKSUMS:
+  ICEasyColorPicker: ef4a7cb516aab8af6c1919a6d853fe5acf568353
+
+COCOAPODS: 0.20.1
