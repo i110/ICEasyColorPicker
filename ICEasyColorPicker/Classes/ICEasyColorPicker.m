@@ -12,7 +12,6 @@
 
 @interface ICEasyColorPicker ()
 {
-    CAGradientLayer *gradient;
 }
 
 @end
@@ -21,6 +20,7 @@
 
 - (void)initialize
 {
+    self.direction = ICEasyColorPickerDirectionVertical;
     self.colors = [[self class] rainbowColors];
     self.layer.cornerRadius = 5;
     self.layer.borderWidth = 3;
@@ -52,6 +52,20 @@
     return self;
 }
 
+- (void)setDirection:(ICEasyColorPickerDirection)direction
+{
+    _direction = direction;
+    
+    CAGradientLayer *gradientLayer = ((CAGradientLayer*)self.layer);
+    if (self.isVertical) {
+        gradientLayer.startPoint = CGPointMake(0.5, 0);
+        gradientLayer.endPoint   = CGPointMake(0.5, 1.0);
+    } else {
+        gradientLayer.startPoint = CGPointMake(0,   0.5);
+        gradientLayer.endPoint   = CGPointMake(1.0, 0.5);
+    }
+}
+
 + (NSArray*)rainbowColors
 {
     static NSArray *rainbowColors;
@@ -72,6 +86,11 @@
 + (Class)layerClass
 {
     return [CAGradientLayer class];
+}
+
+- (BOOL) isVertical
+{
+    return self.direction == ICEasyColorPickerDirectionVertical;
 }
 
 - (void)drawGradient
@@ -115,16 +134,19 @@
 {
     UITouch *touch = [[event touchesForView:self] anyObject];
     CGPoint point = [touch locationInView:self];
-    // point.y = self.bounds.size.height - point.y;
     return point;
 }
 
 - (UIColor*)colorFromPoint:(CGPoint)point
 {
-    CGFloat offset = point.y * self.colors.count / self.bounds.size.height;
+    CGFloat offset;
+    if (self.isVertical) {
+        offset = point.y * self.colors.count / self.bounds.size.height;
+    } else {
+        offset = point.x * self.colors.count / self.bounds.size.width;
+    }
     NSUInteger colorIndex = (int)offset;
     CGFloat rate = offset - colorIndex;
-    NSLog(@"%f, %f, %f, %d, %f", point.y, self.bounds.size.height, offset, colorIndex, rate);
     
     UIColor *color1 = [self.colors objectAtIndex:colorIndex];
     UIColor *color2 = [self.colors objectAtIndex:(colorIndex + 1) % self.colors.count];

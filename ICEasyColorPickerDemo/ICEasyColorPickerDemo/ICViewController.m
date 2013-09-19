@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     self.picker.delegate = self;
+//    self.picker.direction = ICEasyColorPickerDirectionHorizontal;
 }
 
 - (void)colorPicker:(ICEasyColorPicker*)picker didPickedColor:(UIColor*)color

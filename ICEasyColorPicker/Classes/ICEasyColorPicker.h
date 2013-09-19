@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    ICEasyColorPickerDirectionVertical = 1,
+    ICEasyColorPickerDirectionHorizontal = 2,
+} ICEasyColorPickerDirection;
+
 @class ICEasyColorPicker;
 @protocol ICEasyColorPickerDelegate <NSObject>
 - (void)colorPicker:(ICEasyColorPicker*)picker didPickedColor:(UIColor*)color;
@@ -17,5 +22,7 @@
 
 @property (nonatomic) id<ICEasyColorPickerDelegate> delegate;
 @property (nonatomic) NSArray *colors;
+@property (nonatomic) ICEasyColorPickerDirection direction;
+
 
 @end
